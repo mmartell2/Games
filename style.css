@@ -10,7 +10,7 @@
 body {
     background-image: url(images/homepage-background.jpg);
     background-size: 100%;
-    background-color: rgba(0, 0, 0, .6);
+    background-color: rgb(34, 32, 32);
     background-blend-mode: multiply;
 
 }
@@ -259,12 +259,14 @@ header {
 .tic {
     border-bottom: 3px solid red;
     border-top: 3px solid red;
+    transition: background-color .5s ease-out 15ms
 }
 
 .tic:hover {
     background-color: red;
     border-bottom: 3px solid white;
     border-top: 3px solid white;
+    
 
 }
 
@@ -280,6 +282,7 @@ header {
 .sna {
     border-top: 3px solid orange;
     border-bottom: 3px solid orange;
+    transition: background-color .5s ease-out 15ms
 }
 
 .sna:hover a {
@@ -300,6 +303,7 @@ header {
 .rps {
     border-top: 3px solid yellow;
     border-bottom: 3px solid yellow;
+    transition: background-color .5s ease-out 15ms
 }
 
 .rps a {
@@ -320,6 +324,7 @@ header {
 .hang {
     border-top: 3px solid yellowgreen;
     border-bottom: 3px solid yellowgreen;
+    transition: background-color .5s ease-out 15ms
 }
 
 .hang:hover a {
@@ -340,6 +345,7 @@ header {
 .ngg {
     border-top: 3px solid aqua;
     border-bottom: 3px solid aqua;
+    transition: background-color .5s ease-out 15ms
 }
 
 .ngg:hover a {
@@ -374,7 +380,71 @@ header {
     opacity: .6;
 }
 
-@media screen and (max-width: 1500px) {
+.tic-container {
+    text-align: center;
+    background-color: rgb(34, 32, 32);
+    border: 5px solid red;
+    margin-top: 75px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    width:28.75em;
+    height:38em;
+    margin-top: -19em; /*set to a negative number 1/2 of your height*/
+    margin-left: -15em;
+    
+}
+
+.tic-container h1 {
+    color: red;
+}
+
+#ticgameboard {
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 18px;
+    background-color: maroon;
+}
+
+.box {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(34, 32, 32);
+    font-size: 120px;
+    border-right: 5px solid red;
+    border-bottom: 5px solid red;
+}
+
+.box:nth-child(3n) {
+    border-right: none;
+}
+
+.box:nth-child(6) ~ .box {
+    border-bottom: none;
+}
+
+.restartbtn {
+    margin-top: 15px;
+    font-size: 25px;
+    color: red;
+    background-color: rgb(34, 32, 32);
+    border: 5px solid red;
+    padding: 5px 60px;
+}
+
+.restartbtn:hover {
+    color: white;
+    background-color: red;
+    border: 5px solid white;
+    cursor: pointer;
+    transition: background-color .5s ease-out 15ms, border .5s ease-out 15ms, color .5s ease-out 15ms;
+}
+
+@media screen and (max-height: 955px) {
     .nav-ul {
         margin-top: 100px;
     }
@@ -384,8 +454,32 @@ header {
     }
 }
 
-@media screen and (max-width: 1400px){
+@media screen and (max-height: 900px) {
+    .nav-ul {
+        margin-top: 70px;
+    }
+
+    .ul-sm {
+        margin-top: 75px;
+    }
+
+    .tic-container {
+        margin-top: -15rem;
+    }
+}
+
+@media screen and (max-height: 855px) {
+    .nav-ul {
+        margin-top: 40px;
+    }
+
+    .ul-sm {
+        margin-top: 45px;
+    }
+}
+
+@media screen and (max-width: 1350px){
     .navbar h1 {
-        font-size: 33px;
+        font-size: 34px;
     }
 }
